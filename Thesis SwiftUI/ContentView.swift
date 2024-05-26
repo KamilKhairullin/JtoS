@@ -5,14 +5,6 @@ struct ContentView: View {
     // MARK: Internal Properties
 
     @State var jtos: JtoS
-    @State var arr: [JtoS] = [
-        .init(type: "1", params: .init()),
-        .init(type: "2", params: .init()),
-        .init(type: "3", params: .init()),
-        .init(type: "4", params: .init()),
-        .init(type: "5", params: .init()),
-        .init(type: "6", params: .init())
-    ]
 
     // MARK: Body
 
@@ -21,8 +13,6 @@ struct ContentView: View {
             .onAppear {
                 getJtoSModel()
             }
-            .foregroundColor(<#T##color: Color?##Color?#>)
-        
     }
 }
 
@@ -41,7 +31,7 @@ extension ContentView {
             jtos.traverseModel()
             self.jtos = jtos
         } else {
-            print("suka")
+            jtos = .empty
         }
     }
 }
