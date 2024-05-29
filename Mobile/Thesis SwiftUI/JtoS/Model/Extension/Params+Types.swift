@@ -103,11 +103,12 @@ struct ParamsHStack: JtoSParams {
 //
 //    struct <#Type#> {
 //
-//        let common: Common
+//        let common: ParamsCommon
 //
 //        // MARK: Init
 //
 //        init(params: Params) {
+//            self.common = ParamsCommon(params: params)
 //        }
 //    }
 //}
