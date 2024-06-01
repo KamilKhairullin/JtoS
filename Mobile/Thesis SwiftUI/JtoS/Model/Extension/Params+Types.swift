@@ -26,7 +26,7 @@ struct ParamsText: JtoSParams {
     init(params: Params) {
         self.common = ParamsCommon(params: params)
         self.value = params.value ?? ""
-        self.font = .system(size: CGFloat(params.font_size ?? 16))
+        self.font = .system(size: CGFloat(params.fontSize ?? 16))
         self.foregroundColor = Color.fromHex(params.color ?? "")
     }
 }
@@ -44,7 +44,7 @@ struct ParamsImage: JtoSParams {
     init(params: Params) {
         self.common = ParamsCommon(params: params)
         self.url = params.value ?? ""
-        self.contentMode = params.content_mode == "fill" ? .fill : .fit
+        self.contentMode = params.contentMode == "fill" ? .fill : .fit
     }
 }
 

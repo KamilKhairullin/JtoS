@@ -4,7 +4,7 @@ struct ContentView: View {
 
     // MARK: Internal Properties
 
-    @State var jtos: JtoS
+    @State var jtos: JtoS = .empty
 
     // MARK: Body
 
@@ -15,7 +15,6 @@ struct ContentView: View {
             }
     }
 }
-
 
 
 extension ContentView {

@@ -3,7 +3,7 @@ import Foundation
 extension JtoS {
 
     func traverseModel(idx: Int = 0) {
-        spcPrint(idx) { print(type) }
+        spcPrint(idx) { print(type, jToSType) }
         spcPrint(idx) { print(params) }
 
         if let ui {

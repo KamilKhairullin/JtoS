@@ -1,5 +1,5 @@
 {
-    "type": "v_stack",
+    "type": "vStack",
     "params": {
         "alignment": "leading",
         "spacing": 10
@@ -24,7 +24,7 @@
             }
         },
         {
-            "type": "h_stack",
+            "type": "hStack",
             "params": {
                 "alignment": "center",
                 "spacing": 16

@@ -11,6 +11,8 @@ extension JtoSConverter {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
                 let jsonData = try decoder.decode(JtoS.self, from: data)
 
                 return jsonData

@@ -16,18 +16,18 @@ struct Params: Decodable, Equatable, Hashable {
 
     var size: Size?                 = nil
     var color: String?              = nil
-    var corner_radius: String?      = nil
+    var cornerRadius: String?      = nil
 
     // MARK: Text
 
     var value: String?              = nil
     var font: String?               = nil
-    var font_size: Int?             = nil
+    var fontSize: Int?             = nil
 
     // MARK: Image
 
     var url: String?                = nil
-    var content_mode: String?       = nil
+    var contentMode: String?       = nil
 
     // MARK: VStack
 
