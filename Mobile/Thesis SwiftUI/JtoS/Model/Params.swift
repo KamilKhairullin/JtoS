@@ -10,12 +10,12 @@ struct Params: Decodable, Equatable, Hashable {
         let h: Int
     }
 
-    // MARK: - Internal Properties
+    // MARK: Internal Properties
 
     // MARK: Common
 
     var size: Size?                 = nil
-    var color: String?              = nil
+    var colorHex: String?              = nil
     var cornerRadius: String?      = nil
 
     // MARK: Text
