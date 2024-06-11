@@ -51,15 +51,18 @@ struct ParamsCommon: JtoSParams {
 
     let frame: Frame
     let padding: Padding
+    let padding2: Padding
 
     let cornerRadius: CGFloat
     let ignoresSafeArea: Bool
+
+    let bgColorHex: String?
 
     // MARK: Init
 
     init(params: Params) {
         var alignment: Alignment
-        if let a = params.alignment {
+        if let a = params.frameAlignment {
             alignment = switch a {
 
             case "leading" : .leading
@@ -80,9 +83,9 @@ struct ParamsCommon: JtoSParams {
         else { width = .none }
 
         var height: Frame.HeightParamType
-        if let h = params.width { height = .height(value: h.value) }
-        else if let h = params.maxWidth { height = .maxHeight(value: h.value) }
-        else if let h = params.minWidth { height = .minHeight(value: h.value) }
+        if let h = params.height { height = .height(value: h.value) }
+        else if let h = params.maxHeight { height = .maxHeight(value: h.value) }
+        else if let h = params.minHeight { height = .minHeight(value: h.value) }
         else { height = .none }
 
         self.frame = .init(
@@ -92,7 +95,7 @@ struct ParamsCommon: JtoSParams {
         )
 
         let jToSEdge: Padding.JtoSEdge
-        if let es = params.paddingEdges {
+        if let es = params.padding?.edges {
             var edgesSet: Edge.Set = []
 
             for e in es {
@@ -119,11 +122,44 @@ struct ParamsCommon: JtoSParams {
         }
 
         self.padding = .init(
-            length: params.paddingLength ?? 0,
+            length: params.padding?.length ?? 0,
             edge: jToSEdge
+        )
+
+        let jToSEdge2: Padding.JtoSEdge
+        if let es = params.padding2?.edges {
+            var edgesSet: Edge.Set = []
+
+            for e in es {
+
+                let edge: Edge.Set = switch e {
+
+                case "leading": .leading
+                case "trailing": .trailing
+                case "horizontal": .horizontal
+                case "vertical": .vertical
+                case "top": .top
+                case "bottom": .bottom
+
+                default: .all
+
+                }
+
+                edgesSet.insert(edge)
+            }
+
+            jToSEdge2 = .set(edgesSet)
+        } else {
+            jToSEdge2 = .none
+        }
+
+        self.padding2 = .init(
+            length: params.padding2?.length ?? 0,
+            edge: jToSEdge2
         )
 
         self.ignoresSafeArea = params.ignoresSafeArea ?? false
         self.cornerRadius = CGFloat(params.cornerRadius ?? 0)
+        self.bgColorHex = params.bgColorHex
     }
 }
