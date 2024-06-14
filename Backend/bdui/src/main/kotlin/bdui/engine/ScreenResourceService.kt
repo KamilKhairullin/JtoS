@@ -12,7 +12,8 @@ import org.example.bdui.core.abstract.AbstractSection
 @Service
 @Primary
 class ScreenResourceService(
-    private val resolverCaller: ScreenResolverCaller
+    private val resolverCaller: ScreenResolverCaller,
+    private val assemblerContext: AssemblerContext
 ) {
     fun get(
         request: ScreenRequest
@@ -22,8 +23,8 @@ class ScreenResourceService(
             screenTemplate.sections.map { section ->
                 async {
                     section.resolverRespone = resolverCaller.callResolver(section.resolver)
-                    // val assembler = findAssembler(section)
-                    // assembler.convert()
+                    val assembler = findAssembler(section)
+                    assembler.convert(section)
                 }
             }
         }
@@ -32,7 +33,9 @@ class ScreenResourceService(
 
     @Throws(IllegalArgumentException::class)
     private fun findAssembler(section: AbstractSection): AbstractAssembler {
-        // return assemblersMap[section.assemblerType] ?:
-        throw IllegalArgumentException("Assembler for section ${section.assemblerType} not found")
+        val assemblerType = section.assemblerType ?: throw
+            IllegalArgumentException("Assembler for section ${section.assemblerType} has no type")
+        return assemblerContext.get(assemblerType) ?:
+            throw IllegalArgumentException("Assembler for section ${section.assemblerType} not found")
     }
 }

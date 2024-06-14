@@ -13,7 +13,6 @@ class TestResolver: Resolver() {
             val id = (0..826).random()
             val url = "https://rickandmortyapi.com/api/character/$id"
             val result = restTemplate.getForObject(url, Any::class.java)
-            println(result)
             result
         }
     }
