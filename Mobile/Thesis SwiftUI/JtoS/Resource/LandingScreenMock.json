@@ -5,9 +5,10 @@
         {
             "type": "color",
             "params": {
-                "color_hex": "abcaa1",
+                "color_hex": "223232",
                 "ignores_safe_area": true
-            }
+            },
+            "ui": []
         },
         {
             "type": "scrollView",
@@ -16,16 +17,66 @@
             },
             "ui": [
                 {
-                    "type": "image",
+                    "type": "zStack",
                     "params": {
-                        "url": "https://images.unsplash.com/photo-1625926852782-3bef718476dc?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                         "max_width": { "value": "Infinity" },
-                        "height": { "value": 180.0 },
-                        "padding_edges": ["horizontal"],
-                        "padding_length": 12,
-                        "content_mode": "fill",
-                        "corner_radius": 16
-                    }
+                        "max_height": { "value": 180.0 },
+                        "padding": {
+                            "edges": ["top"],
+                            "length": 44
+                        }
+                    },
+                    "ui": [
+                        {
+                            "type": "image",
+                            "params": {
+                                "url": "https://images.unsplash.com/photo-1625926852782-3bef718476dc?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                                "max_width": { "value": "Infinity" },
+                                "max_height": { "value": 180.0 },
+                                "skeleton_max_width": { "value": "Infinity" },
+                                "skeleton_min_height": { "value": 180.0 },
+                                "padding": {
+                                    "edges": ["horizontal", "bottom"],
+                                    "length": 12
+                                },
+                                "content_mode": "fill",
+                                "corner_radius": 16
+                            },
+                            "ui": []
+                        },
+                        {
+                            "type": "vStack",
+                            "params": {},
+                            "ui": [
+                                {
+                                    "type": "spacer",
+                                    "params": {},
+                                    "ui": []
+
+                                },
+                                {
+                                    "type": "text",
+                                    "params": {
+                                        "color_hex": "dddddd",
+                                        "text_value": "Innopolis",
+                                        "font": "system",
+                                        "font_size": 24,
+                                        "max_width": {"value": "Infinity"},
+                                        "frame_alignment": "leading",
+                                        "padding": {
+                                            "edges": ["horizontal"],
+                                            "length": 44
+                                        },
+                                        "padding2": {
+                                            "edges": ["bottom"],
+                                            "length": 36
+                                        }
+                                    },
+                                    "ui": []
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
                     "type": "image",
@@ -33,48 +84,68 @@
                         "url": "https://images.unsplash.com/photo-1717514544287-15f08fdaddd1?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                         "max_width": { "value": "Infinity" },
                         "height": { "value": 420.0 },
-                        "padding_edges": ["horizontal"],
-                        "padding_length": 12,
+                        "skeleton_max_width": { "value": "Infinity" },
+                        "skeleton_min_height": { "value": 420.0 },
+                        "padding": {
+                            "edges": ["horizontal"],
+                            "length": 12
+                        },
                         "content_mode": "fill",
                         "corner_radius": 16
-                    }
+                    },
+                    "ui": []
                 },
                 {
                     "type": "image",
                     "params": {
                         "url": "https://images.unsplash.com/photo-1717256429311-a03ce77bfb59?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                         "max_width": { "value": "Infinity" },
-                        "height": { "value": 420.0 },
-                        "padding_edges": ["horizontal"],
-                        "padding_length": 12,
+                        "max_height": { "value": 420.0 },
+                        "skeleton_max_width": { "value": "Infinity" },
+                        "skeleton_min_height": { "value": 420.0 },
+                        "padding": {
+                            "edges": ["horizontal"],
+                            "length": 12
+                        },
                         "content_mode": "fill",
                         "corner_radius": 16
-                    }
+                    },
+                    "ui": []
                 },
                 {
                     "type": "image",
                     "params": {
-                        "url": "https://images.unsplash.com/photo-1629043916430-feca2aed4eea?q=80&w=3732&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                        "url": "https:<corruption>//images.unsplash.com/photo-1629043916430-feca2aed4eea?q=80&w=3732&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                         "max_width": { "value": "Infinity" },
-                        "height": { "value": 180.0 },
-                        "padding_edges": ["horizontal"],
-                        "padding_length": 12,
+                        "max_height": { "value": 180.0 },
+                        "skeleton_max_width": { "value": "Infinity" },
+                        "skeleton_min_height": { "value": 180.0 },
+                        "padding": {
+                            "edges": ["horizontal"],
+                            "length": 12
+                        },
                         "content_mode": "fill",
                         "corner_radius": 16
-                    }
+                    },
+                    "ui": []
                 },
                 {
                     "type": "image",
                     "params": {
                         "url": "https://images.unsplash.com/photo-1625924305476-d8f96c560c21?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                         "max_width": { "value": "Infinity" },
-                        "height": { "value": 420 },
-                        "padding_edges": ["horizontal"],
-                        "padding_length": 12,
+                        "max_height": { "value": 420 },
+                        "skeleton_max_width": { "value": "Infinity" },
+                        "skeleton_min_height": { "value": 420.0 },
+                        "padding": {
+                            "edges": ["horizontal"],
+                            "length": 12
+                        },
                         "content_mode": "fill",
                         "corner_radius": 16
-                    }
-                },
+                    },
+                    "ui": []
+                }
             ]
         }
     ]
