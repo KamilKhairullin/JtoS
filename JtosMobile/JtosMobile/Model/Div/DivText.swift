@@ -5,4 +5,5 @@ struct DivText: Decodable {
     let width: Size
     let height: Size
     let padding: DivEdgeInsets
+    let fontSize: Int
 }

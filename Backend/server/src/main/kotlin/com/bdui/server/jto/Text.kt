@@ -16,7 +16,8 @@ class Text internal constructor(
         val text: String,
         val width: Size,
         val height: Size,
-        val padding: EdgeInsets
+        val padding: EdgeInsets,
+        val fontSize: Int
     )
 }
 
@@ -24,12 +25,14 @@ fun UiNamespace.text(
     text: String,
     width: Size,
     height: Size,
-    padding: EdgeInsets
+    padding: EdgeInsets,
+    fontSize: Int
 ): Text = Text(
     Text.Properties(
         text = text,
         width = width,
         height = height,
-        padding = padding
+        padding = padding,
+        fontSize = fontSize
     )
 )
