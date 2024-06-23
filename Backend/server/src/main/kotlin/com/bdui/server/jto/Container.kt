@@ -1,10 +1,12 @@
 package com.bdui.server.jto
 
 import ColorRGB
+import color
 import com.bdui.server.jto.model.Orientation
 import com.bdui.server.jto.model.insets.EdgeInsets
 import com.bdui.server.jto.model.size.Size
 import com.fasterxml.jackson.annotation.JsonUnwrapped
+import java.awt.Color
 import java.util.UUID
 
 class Container internal constructor(
@@ -32,7 +34,7 @@ fun UiNamespace.container(
     padding: EdgeInsets,
     items: List<Div>,
     orientation: Orientation,
-    backgroundColor: ColorRGB,
+    backgroundColor: ColorRGB = color(Color.white),
     cornerRadius: Int = 0
 ): Container = Container(
     Container.Properties(

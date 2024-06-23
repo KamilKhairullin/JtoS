@@ -2,6 +2,7 @@ package com.bdui.server.jto
 
 import com.bdui.server.jto.model.ContentMode
 import com.bdui.server.jto.model.insets.EdgeInsets
+import com.bdui.server.jto.model.insets.edgeInsets
 import com.bdui.server.jto.model.size.Size
 import com.fasterxml.jackson.annotation.JsonUnwrapped
 import java.awt.Color

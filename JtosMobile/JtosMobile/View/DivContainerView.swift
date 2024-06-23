@@ -29,14 +29,18 @@ struct DivContainerView: View {
             .background(Color(uiColor: containerData.backgroundColor.toUIColor()))
             .cornerRadius(CGFloat(containerData.cornerRadius))
         } else {
-            VStack {
-                ForEach(containerData.items, id: \.type) { item in
+            VStack(spacing: 0) {
+                ForEach(containerData.items, id: \.id) { item in
                     DivView(div: item)
                 }
             }
             .frame(
-                maxWidth: containerData.width.getSize(),
-                maxHeight: containerData.height.getSize()
+                width: containerData.width.getSize(),
+                height: containerData.height.getSize()
+            )
+            .frame(
+                maxWidth: containerData.width.getMaxSize(),
+                maxHeight: containerData.height.getMaxSize()
             )
             .padding(containerData.padding.toSwiftUI())
             .background(Color(uiColor: containerData.backgroundColor.toUIColor()))

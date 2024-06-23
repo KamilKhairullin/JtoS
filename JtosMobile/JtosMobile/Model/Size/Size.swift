@@ -3,7 +3,7 @@ import Foundation
 enum Size: Decodable {
     case fixed(value: Double)
     case matchParent(weight: Double)
-    case wrapContent(maxSize: Double, minSize: Double)
+    case wrapContent(maxSize: Double?, minSize: Double?)
     
     private enum CodingKeys: String, CodingKey {
         case type
@@ -27,8 +27,8 @@ enum Size: Decodable {
             self = .matchParent(weight: weight)
             
         case "wrapContentSize":
-            let maxSize = try container.decode(Double.self, forKey: .maxSize)
-            let minSize = try container.decode(Double.self, forKey: .minSize)
+            let maxSize = try? container.decode(Double.self, forKey: .maxSize)
+            let minSize = try? container.decode(Double.self, forKey: .minSize)
             self = .wrapContent(maxSize: maxSize, minSize: minSize)
             
         default:
