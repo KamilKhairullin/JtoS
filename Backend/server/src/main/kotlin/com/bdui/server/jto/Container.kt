@@ -5,6 +5,7 @@ import com.bdui.server.jto.model.Orientation
 import com.bdui.server.jto.model.insets.EdgeInsets
 import com.bdui.server.jto.model.size.Size
 import com.fasterxml.jackson.annotation.JsonUnwrapped
+import java.util.UUID
 
 class Container internal constructor(
     @JsonUnwrapped
@@ -12,6 +13,8 @@ class Container internal constructor(
 ): Div {
     override val type: String
         get() = "container"
+    override val id: String
+        get() = UUID.randomUUID().toString()
     class Properties internal constructor(
         val width: Size,
         val height: Size,

@@ -5,6 +5,7 @@ import com.bdui.server.jto.model.insets.EdgeInsets
 import com.bdui.server.jto.model.size.Size
 import com.fasterxml.jackson.annotation.JsonUnwrapped
 import java.awt.Color
+import java.util.UUID
 
 class Text internal constructor(
     @JsonUnwrapped
@@ -12,6 +13,8 @@ class Text internal constructor(
 ) : Div {
     override val type: String
         get() = "text"
+    override val id: String
+        get() = UUID.randomUUID().toString()
     class Properties internal constructor(
         val text: String,
         val width: Size,

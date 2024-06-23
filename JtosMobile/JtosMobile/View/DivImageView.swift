@@ -19,6 +19,10 @@ struct DivImageView: View {
                     width: imageData.width.getSize(),
                     height: imageData.height.getSize()
                 )
+                .frame(
+                    maxWidth: imageData.width.getMaxSize(),
+                    maxHeight: imageData.height.getMaxSize()
+                )
                 .padding(imageData.padding.toSwiftUI())
         } placeholder: {
             EmptyView()

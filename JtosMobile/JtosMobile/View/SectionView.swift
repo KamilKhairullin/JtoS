@@ -14,20 +14,14 @@ struct SectionView: View {
     
     @ViewBuilder
     private func buildView(from section: Section) -> some View {
-        ZStack {
-            ScrollView {
-                ForEach(section.views, id: \.self.id) { view in
-                    if let div = view.states.first?.div {
-                        DivView(div: div)
-                    } else {
-                        EmptyView()
-                    }
+        VStack(spacing: 0) {
+            ForEach(section.views, id: \.self.id) { view in
+                if let div = view.states.first?.div {
+                    DivView(div: div)
+                } else {
+                    EmptyView()
                 }
             }
-            .frame(
-                maxWidth: .infinity,
-                maxHeight: .infinity
-            )
         }
     }
 }

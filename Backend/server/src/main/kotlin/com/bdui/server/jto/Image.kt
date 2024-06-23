@@ -5,6 +5,7 @@ import com.bdui.server.jto.model.size.Size
 import com.bdui.server.jto.model.Url
 import com.bdui.server.jto.model.insets.EdgeInsets
 import com.fasterxml.jackson.annotation.JsonUnwrapped
+import java.util.UUID
 
 class Image internal constructor(
     @JsonUnwrapped
@@ -12,6 +13,8 @@ class Image internal constructor(
 ) : Div {
     override val type: String
         get() = "image"
+    override val id: String
+        get() = UUID.randomUUID().toString()
     class Properties internal constructor(
         val imageUrl: Url?,
         val contentMode: ContentMode,

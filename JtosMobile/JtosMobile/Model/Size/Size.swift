@@ -46,4 +46,15 @@ enum Size: Decodable {
             return nil
         }
     }
+    
+    func getMaxSize() -> CGFloat? {
+        switch self {
+        case .fixed(let value):
+            return nil
+        case .matchParent(let weight):
+            return CGFloat.infinity
+        case .wrapContent(let maxSize, let minSize):
+            return nil
+        }
+    }
 }

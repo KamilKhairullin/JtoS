@@ -17,6 +17,10 @@ struct DivTextView: View {
                 width: textData.width.getSize(),
                 height: textData.height.getSize()
             )
+            .frame(
+                maxWidth: textData.width.getMaxSize(),
+                maxHeight: textData.height.getMaxSize()
+            )
             .padding(textData.padding.toSwiftUI())
     }
 }

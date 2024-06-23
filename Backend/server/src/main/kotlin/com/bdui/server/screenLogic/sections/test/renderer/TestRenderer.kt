@@ -35,6 +35,13 @@ object TestRenderer {
                                 height = fixedSize(200),
                                 padding = edgeInsets(left = 0, right = 0, top = 0, bottom = 0),
                                 fontSize = 13
+                            ),
+                            text(
+                                text = "Текст 2",
+                                width = fixedSize(200),
+                                height = fixedSize(200),
+                                padding = edgeInsets(left = 0, right = 0, top = 0, bottom = 0),
+                                fontSize = 13
                             )
                         ),
                         cornerRadius = 15

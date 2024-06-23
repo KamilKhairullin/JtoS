@@ -12,31 +12,35 @@ struct DivContainerView: View {
     @ViewBuilder
     private func buildContainerView(_ containerData: DivContainer) -> some View {
         if containerData.orientation == .horizontal {
-            HStack {
-                ForEach(containerData.items, id: \.type) { item in
+            HStack(spacing: 0) {
+                ForEach(containerData.items, id: \.id) { item in
                     DivView(div: item)
                 }
-                .frame(
-                    width: containerData.width.getSize(),
-                    height: containerData.height.getSize()
-                )
-                .padding(containerData.padding.toSwiftUI())
-                .background(Color(uiColor: containerData.backgroundColor.toUIColor()))
-                .cornerRadius(CGFloat(containerData.cornerRadius))
             }
+            .frame(
+                width: containerData.width.getSize(),
+                height: containerData.height.getSize()
+            )
+            .frame(
+                maxWidth: containerData.width.getMaxSize(),
+                maxHeight: containerData.height.getMaxSize()
+            )
+            .padding(containerData.padding.toSwiftUI())
+            .background(Color(uiColor: containerData.backgroundColor.toUIColor()))
+            .cornerRadius(CGFloat(containerData.cornerRadius))
         } else {
             VStack {
                 ForEach(containerData.items, id: \.type) { item in
                     DivView(div: item)
                 }
-                .frame(
-                    width: containerData.width.getSize(),
-                    height: containerData.height.getSize()
-                )
-                .padding(containerData.padding.toSwiftUI())
-                .background(Color(uiColor: containerData.backgroundColor.toUIColor()))
-                .cornerRadius(CGFloat(containerData.cornerRadius))
             }
+            .frame(
+                maxWidth: containerData.width.getSize(),
+                maxHeight: containerData.height.getSize()
+            )
+            .padding(containerData.padding.toSwiftUI())
+            .background(Color(uiColor: containerData.backgroundColor.toUIColor()))
+            .cornerRadius(CGFloat(containerData.cornerRadius))
         }
     }
 }
