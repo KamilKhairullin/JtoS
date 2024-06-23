@@ -1,6 +1,9 @@
 package com.bdui.server.jto
 
+import com.fasterxml.jackson.annotation.JsonUnwrapped
+
 class View internal constructor(
+    @JsonUnwrapped
     val properties: Properties
 ) {
     class Properties internal  constructor(
@@ -8,11 +11,12 @@ class View internal constructor(
         val states: List<State>?
     )
     class State internal constructor(
+        @JsonUnwrapped
         val properties: Properties
     ) {
         class Properties internal constructor(
             val stateId: Int,
-            val element: UiElement
+            val div: Div
         ) {}
     }
 }

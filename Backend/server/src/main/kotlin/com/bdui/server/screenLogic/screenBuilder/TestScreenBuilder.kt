@@ -9,17 +9,17 @@ class TestScreenBuilder: AbstractScreenBuilder() {
     override fun build() = screen {
         sections {
             section<TestSection> {
-                id = TestSection.NAME
+                id = "${TestSection.NAME}-1"
                 resolver = TestStubResolver()
                 assemblerType = "TestAssembler"
             }
             section<TestSection> {
-                id = TestSection.NAME
+                id = "${TestSection.NAME}-2"
                 resolver = TestStubResolver()
                 assemblerType = "TestAssembler"
             }
             section<TestSection> {
-                id = TestSection.NAME
+                id = "${TestSection.NAME}-3"
                 resolver = TestStubResolver()
                 assemblerType = "TestAssembler"
             }
