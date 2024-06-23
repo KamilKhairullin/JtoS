@@ -12,10 +12,11 @@ struct DivTextView: View {
     @ViewBuilder
     private func buildTextView(_ textData: DivText) -> some View {
         Text(textData.text)
-        .frame(
-            width: textData.width.getSize(),
-            height: textData.height.getSize()
-        )
-        .padding(textData.padding.toSwiftUI())
+            .font(.system(size: CGFloat(textData.fontSize)))
+            .frame(
+                width: textData.width.getSize(),
+                height: textData.height.getSize()
+            )
+            .padding(textData.padding.toSwiftUI())
     }
 }
