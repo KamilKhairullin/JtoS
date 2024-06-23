@@ -1,0 +1,27 @@
+import SwiftUI
+
+struct DivImageView: View {
+    
+    let divImage: DivImage
+    
+    var body: some View {
+        buildImageView(divImage)
+    }
+    
+    
+    @ViewBuilder
+    private func buildImageView(_ imageData: DivImage) -> some View {
+        AsyncImage(url: URL(string: imageData.imageUrl)) { image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: imageData.contentMode.toSwiftUI())
+                .frame(
+                    width: imageData.width.getSize(),
+                    height: imageData.height.getSize()
+                )
+                .padding(imageData.padding.toSwiftUI())
+        } placeholder: {
+            EmptyView()
+        }
+    }
+}

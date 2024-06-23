@@ -1,0 +1,8 @@
+import Foundation
+
+struct DivText: Decodable {
+    let text: String
+    let width: Size
+    let height: Size
+    let padding: DivEdgeInsets
+}
