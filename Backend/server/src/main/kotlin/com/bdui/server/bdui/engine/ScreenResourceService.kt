@@ -9,6 +9,7 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.runBlocking
 import com.bdui.server.bdui.core.abstract.AbstractAssembler
 import com.bdui.server.bdui.core.abstract.AbstractSection
+import com.bdui.server.bdui.core.abstract.toSectionResponses
 
 @Service
 @Primary
@@ -20,17 +21,17 @@ class ScreenResourceService(
         request: ScreenRequest
     ): ScreenResponse {
         val screenTemplate = request.buildScreenTemplate()
-        val sections = runBlocking {
+        val sectionResponses = runBlocking {
              screenTemplate.sections.map { section ->
                 async {
                     section.resolverRespone = resolverCaller.callResolver(section.resolver)
                     val assembler = findAssembler(section)
-                    section.snippets = assembler.convert(section)
+                    section.views = assembler.convert(section)
                     return@async section
                 }
             }.awaitAll()
-        }
-        return ScreenResponse(ui = sections)
+        }.toSectionResponses()
+        return ScreenResponse(ui = sectionResponses)
     }
 
     @Throws(IllegalArgumentException::class)

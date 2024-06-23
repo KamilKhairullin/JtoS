@@ -1,14 +1,15 @@
 package com.bdui.server.jto
 
-import com.bdui.server.jto.UiElement
-import com.bdui.server.jto.UiNamespace
-import com.bdui.server.jto.View
-import com.bdui.server.jto.asList
-
-fun UiNamespace.singleState(element: UiElement): List<View.State> =
+fun UiNamespace.singleState(div: Div): List<View.State> =
     View.State(
         View.State.Properties(
-            stateId = 0,
-            element = element
+            stateId = "0",
+            div = div
         )
     ).asList()
+
+fun ui(init: UiNamespace.() -> View): View {
+    val namespace = UiNamespace()
+    val view = init.invoke(namespace)
+    return view
+}

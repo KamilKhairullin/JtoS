@@ -1,39 +1,35 @@
 package com.bdui.server.jto
 
 import com.bdui.server.jto.model.ContentMode
-import com.bdui.server.jto.model.size.Size
-import com.bdui.server.jto.model.Url
 import com.bdui.server.jto.model.insets.EdgeInsets
+import com.bdui.server.jto.model.size.Size
 import com.fasterxml.jackson.annotation.JsonUnwrapped
+import java.awt.Color
 
-class Image internal constructor(
+class Text internal constructor(
     @JsonUnwrapped
     val properties: Properties
 ) : Div {
     override val type: String
-        get() = "image"
+        get() = "text"
     class Properties internal constructor(
-        val imageUrl: Url?,
-        val contentMode: ContentMode,
+        val text: String,
         val width: Size,
         val height: Size,
         val padding: EdgeInsets
     )
-
 }
 
-fun UiNamespace.image(
-    imageUrl: Url?,
-    contentMode: ContentMode,
+fun UiNamespace.text(
+    text: String,
     width: Size,
     height: Size,
-    padding: EdgeInsets,
-): Image = Image(
-    Image.Properties(
-        imageUrl = imageUrl,
-        contentMode = contentMode,
+    padding: EdgeInsets
+): Text = Text(
+    Text.Properties(
+        text = text,
         width = width,
         height = height,
-        padding = padding,
+        padding = padding
     )
 )
