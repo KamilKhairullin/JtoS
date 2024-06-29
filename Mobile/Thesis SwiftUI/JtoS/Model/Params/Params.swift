@@ -2,12 +2,47 @@ import Foundation
 
 struct Params: Decodable, Equatable, Hashable {
 
-    // MARK: Nested Types
+    var ignoresSafeArea: Bool?      = nil
+
+    var frame: FrameSize?           = nil
+    var skeletonFrame: FrameSize?   = nil
+
+    var padding: Padding?           = nil
+    var padding2: Padding?          = nil
+
+    var bgColorHex: String?         = nil
+    var colorHex: String?           = nil
+    var cornerRadius: Double?       = nil
+
+    var textValue: String?          = nil
+    var font: String?               = nil
+    var fontSize: Int?              = nil
+
+    var url: String?                = nil
+    var contentMode: String?        = nil
+
+    var spacing: Int?               = nil
+    var alignment: String?          = nil
+    var axes: String?               = nil
+
+    var textFromVar: String?        = nil
+
+    var onTapAction: OnTapAction?   = nil
+
+    var state: State?               = nil
+
+    var tabbars: [Tabbar]?          = nil
+    var tabbarVarId: String?        = nil
+}
+
+// MARK: - Nested Types
+
+extension Params {
 
     struct CGFloatValueWrapper: Decodable, Equatable, Hashable {
 
         // MARK: Nested Types
-        
+
         enum CodingKeys: String, CodingKey {
             case value
         }
@@ -29,14 +64,20 @@ struct Params: Decodable, Equatable, Hashable {
             }
         }
     }
+}
+
+extension Params {
 
     struct Padding: Decodable, Equatable, Hashable {
 
         let edges: [String]
         let length: CGFloat
     }
+}
 
-    struct ButtonAction: Decodable, Equatable, Hashable {
+extension Params {
+
+    struct OnTapAction: Decodable, Equatable, Hashable {
 
         // MARK: Nested Types
 
@@ -47,10 +88,20 @@ struct Params: Decodable, Equatable, Hashable {
             var value: Int
         }
 
+        struct BottomSheet: Decodable, Equatable, Hashable {
+
+            var source: String
+            var string: String
+        }
+
         // MARK: Internal Properties
 
         var varAction: VarAction?
+        var bottomSheet: BottomSheet?
     }
+}
+
+extension Params {
 
     struct FrameSize: Decodable, Equatable, Hashable {
         var width: CGFloatValueWrapper?             = nil
@@ -60,50 +111,35 @@ struct Params: Decodable, Equatable, Hashable {
         var height: CGFloatValueWrapper?            = nil
         var maxHeight: CGFloatValueWrapper?         = nil
         var minHeight: CGFloatValueWrapper?         = nil
+
+        var alignment: String?                      = nil
     }
+}
 
-    // MARK: Internal Properties
+extension Params {
 
-    var ignoresSafeArea: Bool?                      = nil
+    struct State: Decodable, Equatable, Hashable {
 
-    var width: CGFloatValueWrapper?                 = nil
-    var maxWidth: CGFloatValueWrapper?              = nil
-    var minWidth: CGFloatValueWrapper?              = nil
-    var skeletonWidth: CGFloatValueWrapper?         = nil
-    var skeletonMaxWidth: CGFloatValueWrapper?      = nil
-    var skeletonMinWidth: CGFloatValueWrapper?      = nil
+        var conditional: String?
+        var valueForConditional: Int?
 
-    var height: CGFloatValueWrapper?                = nil
-    var maxHeight: CGFloatValueWrapper?             = nil
-    var minHeight: CGFloatValueWrapper?             = nil
-    var skeletonHeight: CGFloatValueWrapper?        = nil
-    var skeletonMaxHeight: CGFloatValueWrapper?     = nil
-    var skeletonMinHeight: CGFloatValueWrapper?     = nil
+        var varId: String?
+    }
+}
 
-    var frame: FrameSize?                           = nil
-    var skeletonFrame: FrameSize?                   = nil
+extension Params {
 
-    var frameAlignment: String?                     = nil
+    struct Tabbar: Decodable, Equatable, Hashable {
 
-    var padding: Padding?                           = nil
-    var padding2: Padding?                          = nil
+        var tag: Int
+        var title: String?                          = nil
 
-    var bgColorHex: String?                         = nil
-    var colorHex: String?                           = nil
-    var cornerRadius: Double?                       = nil
+        var systemImage: String?                    = nil
+        var imageUrl: String?                       = nil
 
-    var textValue: String?                          = nil
-    var font: String?                               = nil
-    var fontSize: Int?                              = nil
+        var mock: String?                           = nil
+        var url: String?                            = nil
 
-    var url: String?                                = nil
-    var contentMode: String?                        = nil
-
-    var spacing: Int?                               = nil
-    var alignment: String?                          = nil
-    var axes: String?                               = nil
-
-    var textFromVar: String?                        = nil
-
-    var buttonAction: ButtonAction?                 = nil
+        var tintColor: String?                      = nil
+    }
 }
