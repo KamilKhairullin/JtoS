@@ -13,9 +13,6 @@
 		C62705362C1A35EE005723FB /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62705352C1A35EE005723FB /* Blur.swift */; };
 		C6295EAA2C15DDDD009B3721 /* ApplyImageSkeletonParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6295EA92C15DDDD009B3721 /* ApplyImageSkeletonParams.swift */; };
 		C6295EAC2C15DE07009B3721 /* ParamsImageSkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6295EAB2C15DE07009B3721 /* ParamsImageSkeleton.swift */; };
-		C6295EAE2C161475009B3721 /* ImageExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6295EAD2C161475009B3721 /* ImageExampleView.swift */; };
-		C6295EB12C16154C009B3721 /* CounterExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6295EB02C16154C009B3721 /* CounterExampleView.swift */; };
-		C6295EB32C1622D2009B3721 /* CounterWithModelExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6295EB22C1622D2009B3721 /* CounterWithModelExampleView.swift */; };
 		C62B8C6D2C137E6500AF6D20 /* PicturesScreenMock.json in Resources */ = {isa = PBXBuildFile; fileRef = C62B8C6C2C137E6500AF6D20 /* PicturesScreenMock.json */; };
 		C62B8C732C13900A00AF6D20 /* ParamsCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62B8C722C13900A00AF6D20 /* ParamsCommon.swift */; };
 		C62B8C752C13902000AF6D20 /* ParamsText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62B8C742C13902000AF6D20 /* ParamsText.swift */; };
@@ -38,9 +35,8 @@
 		C64C326A2C14707300192683 /* ParamsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C32692C14707300192683 /* ParamsButton.swift */; };
 		C64C326C2C14E37300192683 /* JtoSRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64C326B2C14E37300192683 /* JtoSRootView.swift */; };
 		C660EDA82C2B727F00A27AE6 /* examples.json in Resources */ = {isa = PBXBuildFile; fileRef = C660EDA72C2B727F00A27AE6 /* examples.json */; };
-		C670EA1E2C1DFB4600B05D21 /* TabbarWithBottomSheetExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C670EA1D2C1DFB4600B05D21 /* TabbarWithBottomSheetExampleView.swift */; };
 		C670EA202C1E2B7A00B05D21 /* SomeTextScreenMock.json in Resources */ = {isa = PBXBuildFile; fileRef = C670EA1F2C1E2B7A00B05D21 /* SomeTextScreenMock.json */; };
-		C6B09DCD2C186F2400C1F285 /* ExampleCounterScreenMock.json in Resources */ = {isa = PBXBuildFile; fileRef = C6B09DCC2C186F2400C1F285 /* ExampleCounterScreenMock.json */; };
+		C6B09DCD2C186F2400C1F285 /* Picture.json in Resources */ = {isa = PBXBuildFile; fileRef = C6B09DCC2C186F2400C1F285 /* Picture.json */; };
 		C6B09DD02C18CF3B00C1F285 /* JtoSStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B09DCF2C18CF3B00C1F285 /* JtoSStore.swift */; };
 		C6E489732BF286F500427675 /* Thesis_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E489722BF286F500427675 /* Thesis_SwiftUIApp.swift */; };
 		C6E489752BF286F500427675 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E489742BF286F500427675 /* ContentView.swift */; };
@@ -49,7 +45,6 @@
 		C6E489822BF28DEE00427675 /* JtoSConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E489812BF28DEE00427675 /* JtoSConverter.swift */; };
 		C6E489862BF28E1C00427675 /* CatalogScreenMock.json in Resources */ = {isa = PBXBuildFile; fileRef = C6E489852BF28E1C00427675 /* CatalogScreenMock.json */; };
 		C6E489882BF28EE300427675 /* JtoSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E489872BF28EE300427675 /* JtoSView.swift */; };
-		C6E4898B2BF28F2300427675 /* JtoSMockType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E4898A2BF28F2300427675 /* JtoSMockType.swift */; };
 		C6E4898D2BF28FD900427675 /* JtoS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E4898C2BF28FD900427675 /* JtoS.swift */; };
 		C6F1CB172BF50C9300CF9317 /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F1CB162BF50C9300CF9317 /* Color+hex.swift */; };
 /* End PBXBuildFile section */
@@ -61,9 +56,6 @@
 		C62705352C1A35EE005723FB /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		C6295EA92C15DDDD009B3721 /* ApplyImageSkeletonParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyImageSkeletonParams.swift; sourceTree = "<group>"; };
 		C6295EAB2C15DE07009B3721 /* ParamsImageSkeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsImageSkeleton.swift; sourceTree = "<group>"; };
-		C6295EAD2C161475009B3721 /* ImageExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExampleView.swift; sourceTree = "<group>"; };
-		C6295EB02C16154C009B3721 /* CounterExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterExampleView.swift; sourceTree = "<group>"; };
-		C6295EB22C1622D2009B3721 /* CounterWithModelExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterWithModelExampleView.swift; sourceTree = "<group>"; };
 		C62B8C6C2C137E6500AF6D20 /* PicturesScreenMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PicturesScreenMock.json; sourceTree = "<group>"; wrapsLines = 0; };
 		C62B8C722C13900A00AF6D20 /* ParamsCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsCommon.swift; sourceTree = "<group>"; };
 		C62B8C742C13902000AF6D20 /* ParamsText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsText.swift; sourceTree = "<group>"; };
@@ -86,9 +78,8 @@
 		C64C32692C14707300192683 /* ParamsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsButton.swift; sourceTree = "<group>"; };
 		C64C326B2C14E37300192683 /* JtoSRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JtoSRootView.swift; sourceTree = "<group>"; };
 		C660EDA72C2B727F00A27AE6 /* examples.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = examples.json; sourceTree = "<group>"; };
-		C670EA1D2C1DFB4600B05D21 /* TabbarWithBottomSheetExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarWithBottomSheetExampleView.swift; sourceTree = "<group>"; };
 		C670EA1F2C1E2B7A00B05D21 /* SomeTextScreenMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SomeTextScreenMock.json; sourceTree = "<group>"; };
-		C6B09DCC2C186F2400C1F285 /* ExampleCounterScreenMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExampleCounterScreenMock.json; sourceTree = "<group>"; };
+		C6B09DCC2C186F2400C1F285 /* Picture.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Picture.json; sourceTree = "<group>"; };
 		C6B09DCF2C18CF3B00C1F285 /* JtoSStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JtoSStore.swift; sourceTree = "<group>"; };
 		C6E4896F2BF286F500427675 /* Thesis SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thesis SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E489722BF286F500427675 /* Thesis_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thesis_SwiftUIApp.swift; sourceTree = "<group>"; };
@@ -98,7 +89,6 @@
 		C6E489812BF28DEE00427675 /* JtoSConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JtoSConverter.swift; sourceTree = "<group>"; };
 		C6E489852BF28E1C00427675 /* CatalogScreenMock.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CatalogScreenMock.json; sourceTree = "<group>"; wrapsLines = 0; };
 		C6E489872BF28EE300427675 /* JtoSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JtoSView.swift; sourceTree = "<group>"; };
-		C6E4898A2BF28F2300427675 /* JtoSMockType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JtoSMockType.swift; sourceTree = "<group>"; };
 		C6E4898C2BF28FD900427675 /* JtoS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JtoS.swift; sourceTree = "<group>"; };
 		C6F1CB162BF50C9300CF9317 /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,10 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				C6E489742BF286F500427675 /* ContentView.swift */,
-				C6295EAD2C161475009B3721 /* ImageExampleView.swift */,
-				C6295EB02C16154C009B3721 /* CounterExampleView.swift */,
-				C6295EB22C1622D2009B3721 /* CounterWithModelExampleView.swift */,
-				C670EA1D2C1DFB4600B05D21 /* TabbarWithBottomSheetExampleView.swift */,
 			);
 			path = ExampleViews;
 			sourceTree = "<group>";
@@ -269,7 +255,7 @@
 				C6E489852BF28E1C00427675 /* CatalogScreenMock.json */,
 				C62B8C6C2C137E6500AF6D20 /* PicturesScreenMock.json */,
 				C62705322C1A233D005723FB /* TabbarScreenMock.json */,
-				C6B09DCC2C186F2400C1F285 /* ExampleCounterScreenMock.json */,
+				C6B09DCC2C186F2400C1F285 /* Picture.json */,
 				C670EA1F2C1E2B7A00B05D21 /* SomeTextScreenMock.json */,
 				C660EDA72C2B727F00A27AE6 /* examples.json */,
 			);
@@ -281,7 +267,6 @@
 			children = (
 				C62B8C832C13913700AF6D20 /* JtoS */,
 				C62B8C6E2C138FA900AF6D20 /* Params */,
-				C6E4898A2BF28F2300427675 /* JtoSMockType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,7 +343,7 @@
 				C62B8C6D2C137E6500AF6D20 /* PicturesScreenMock.json in Resources */,
 				C660EDA82C2B727F00A27AE6 /* examples.json in Resources */,
 				C6E489772BF286F600427675 /* Assets.xcassets in Resources */,
-				C6B09DCD2C186F2400C1F285 /* ExampleCounterScreenMock.json in Resources */,
+				C6B09DCD2C186F2400C1F285 /* Picture.json in Resources */,
 				C6E489862BF28E1C00427675 /* CatalogScreenMock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,14 +358,11 @@
 				C62B8C8E2C13921D00AF6D20 /* ApplyVStackParams.swift in Sources */,
 				C627052F2C1A0AFC005723FB /* ParamsTabbar.swift in Sources */,
 				C6295EAA2C15DDDD009B3721 /* ApplyImageSkeletonParams.swift in Sources */,
-				C6E4898B2BF28F2300427675 /* JtoSMockType.swift in Sources */,
 				C62B8C862C13918400AF6D20 /* ApplyCommonParams.swift in Sources */,
 				C63D72852BF3F49D00818450 /* Params.swift in Sources */,
-				C6295EB32C1622D2009B3721 /* CounterWithModelExampleView.swift in Sources */,
 				C62B8C772C13903700AF6D20 /* ParamsImage.swift in Sources */,
 				C62705362C1A35EE005723FB /* Blur.swift in Sources */,
 				C64C326C2C14E37300192683 /* JtoSRootView.swift in Sources */,
-				C670EA1E2C1DFB4600B05D21 /* TabbarWithBottomSheetExampleView.swift in Sources */,
 				C6E4898D2BF28FD900427675 /* JtoS.swift in Sources */,
 				C6E489882BF28EE300427675 /* JtoSView.swift in Sources */,
 				C62705312C1A16D6005723FB /* ApplyTabbarParams.swift in Sources */,
@@ -390,7 +372,6 @@
 				C62B8C7F2C13908A00AF6D20 /* ParamsZStack.swift in Sources */,
 				C62B8C7D2C13907000AF6D20 /* ParamsHStack.swift in Sources */,
 				C6295EAC2C15DE07009B3721 /* ParamsImageSkeleton.swift in Sources */,
-				C6295EAE2C161475009B3721 /* ImageExampleView.swift in Sources */,
 				C6B09DD02C18CF3B00C1F285 /* JtoSStore.swift in Sources */,
 				C63D728B2BF3F4F700818450 /* ParamsScrollView.swift in Sources */,
 				C6E489822BF28DEE00427675 /* JtoSConverter.swift in Sources */,
@@ -402,7 +383,6 @@
 				C6E489732BF286F500427675 /* Thesis_SwiftUIApp.swift in Sources */,
 				C62B8C732C13900A00AF6D20 /* ParamsCommon.swift in Sources */,
 				C62B8C942C13927700AF6D20 /* ApplyScrollViewParams.swift in Sources */,
-				C6295EB12C16154C009B3721 /* CounterExampleView.swift in Sources */,
 				C62B8C752C13902000AF6D20 /* ParamsText.swift in Sources */,
 				C62B8C8A2C1391FA00AF6D20 /* ApplyImageParams.swift in Sources */,
 				C62B8C792C13904E00AF6D20 /* ParamsColor.swift in Sources */,

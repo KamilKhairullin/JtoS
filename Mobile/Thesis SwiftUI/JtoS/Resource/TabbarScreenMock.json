@@ -10,20 +10,20 @@
             },
             {
                 "tag": 1,
-                "mock": "aaa",
+                "mock": "examples",
                 "system_image": "circle",
                 "tint_color": "6bc4ed"
             },
             {
                 "tag": 2,
-                "url": "http://some.test.com/homePage",
+                "mock": "Picture",
                 "system_image": "square",
                 "title": "none",
                 "tint_color": "d667f5"
             },
             {
                 "tag": 3,
-                "url": "",
+                "mock": "SomeTextScreenMock",
                 "system_image": "triangle",
                 "tint_color": "eb3859"
             }

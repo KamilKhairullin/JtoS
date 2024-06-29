@@ -257,8 +257,8 @@ extension JtoSView {
         ForEach(tabbarParams.tabbars, id: \.tag) { tabbar in
             if store.get(for: tabbarParams.tabbarVarId) == tabbar.tag {
                 switch tabbar.rootSourceType {
-                    case let .url(urlString): JtoSRootView(url: urlString)
-                    case let .mock(filename): JtoSRootView(mock: .filename, filename)
+                    case let .url(urlString): JtoSRootView(resource: .url(string: urlString))
+                    case let .mock(filename): JtoSRootView(resource: .mock(filename: filename))
                 }
             }
         }
@@ -301,7 +301,7 @@ private extension View {
                 store.shouldPresent = true
             }
             .sheet(isPresented: shouldPresent) {
-                JtoSRootView(url: string)
+                JtoSRootView(resource: .url(string: string))
             }
 
         case let .openBottomSheetMock(filename):
@@ -309,7 +309,7 @@ private extension View {
                 store.shouldPresent = true
             }
             .sheet(isPresented: shouldPresent) {
-                JtoSRootView(mock: .filename, filename)
+                JtoSRootView(resource: .mock(filename: filename))
             }
 
         case .openNewView(_):

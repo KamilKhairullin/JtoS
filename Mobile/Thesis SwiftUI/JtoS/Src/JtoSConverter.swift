@@ -1,12 +1,15 @@
 import SwiftUI
 
-struct JtoSConverter { }
+enum JtoSConverter {
 
-extension JtoSConverter {
-
-    static func decodeMockJSON(for screenType: JtoSMockScreenType) -> JtoS? {
-        let mockFileName = screenType.rawValue + Constants.mockFileSuffix
-        return decodeMockJSON(from: mockFileName)
+    static var empty: some View {
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello, world!")
+        }
+        .padding()
     }
 
     static func decodeMockJSON(from filename: String) -> JtoS? {
@@ -25,26 +28,5 @@ extension JtoSConverter {
         }
 
         return nil
-    }
-}
-
-extension JtoSConverter {
-
-    static var empty: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
-
-extension JtoSConverter {
-
-    private enum Constants {
-
-        static let mockFileSuffix = "ScreenMock"
     }
 }

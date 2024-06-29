@@ -5,11 +5,9 @@ struct JtoSRootView: View {
     // MARK: Private Properties
 
     @State private var jtos: JtoS = .empty
-    private var store: JtoSStore = .init()
 
-    private let url: String
-    private let mockType: JtoSMockScreenType
-    private let mockFilename: String
+    private var store: JtoSStore = .init()
+    private let resource: ResourceType
 
     // MARK: Body
 
@@ -17,44 +15,43 @@ struct JtoSRootView: View {
         JtoSView(model: $jtos)
             .environmentObject(store)
             .onAppear {
-                if mockType != .none {
-                    getJtoSModelFromMock()
-                } else {
-                    getDataFromUrl()
+                switch resource {
+                case let .url(string):
+                    getDataFromUrl(string)
+                case let .mock(filename):
+                    getJtoSModelFromMock(filename)
                 }
         }
     }
 
     // MARK: Init
 
-    init(mock: JtoSMockScreenType, _ filename: String = "") {
-        self.mockType = mock
-        self.url = ""
-        self.mockFilename = filename
-    }
-
-    init(url: String) {
-        self.mockType = .none
-        self.url = url
-        self.mockFilename = ""
+    init(resource: ResourceType) {
+        self.resource = resource
     }
 }
 
 extension JtoSRootView {
 
-    private func getDataFromUrl() {
+    enum ResourceType {
+
+        case url(string: String)
+        case mock(filename: String)
+    }
+
+}
+
+extension JtoSRootView {
+
+    private func getDataFromUrl(_ urlString: String) {
         jtos = .empty
     }
 
-    private func getJtoSModelFromMock() {
-        let model = if mockType == .filename {
-            JtoSConverter.decodeMockJSON(from: mockFilename)
-        } else {
-            JtoSConverter.decodeMockJSON(for: mockType)
-        }
+    private func getJtoSModelFromMock(_ filename: String) {
+        let model = JtoSConverter.decodeMockJSON(from: filename)
 
         if let model = model {
-            model.traverseModel()
+//            model.traverseModel()
             jtos = model
         } else {
             jtos = .empty
